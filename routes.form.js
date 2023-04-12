@@ -24,7 +24,7 @@ const { v4: uuidv4 } = require('uuid');
 
 const router = Router();
 
-router.get('/', () => {
+router.get('/', (req, res) => {
     res.send('Welcome')
 })
 
