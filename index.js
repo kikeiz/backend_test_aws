@@ -15,7 +15,9 @@ app.use((req, res, next) => {
   next();
 });
 app.use(routes)
-app.use(cors());
+app.use(cors({
+    origin: 'http://react-website-bucket-kike.s3-website.eu-north-1.amazonaws.com'
+}));
 
 app.listen(3000, () =>
   console.log('Example app listening on port 3000!'),
